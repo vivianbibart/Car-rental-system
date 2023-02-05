@@ -1,0 +1,67 @@
+CREATE TABLE Cars (
+    car_id SERIAL PRIMARY KEY,
+    make VARCHAR(50) NOT NULL,
+    model VARCHAR(50) NOT NULL,
+    year INT NOT NULL,
+    color VARCHAR(20) NOT NULL,
+    plate_number VARCHAR(10) NOT NULL
+);
+
+
+CREATE TABLE Customers (
+    customer_id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    address VARCHAR(200) NOT NULL,
+    driver_license_number VARCHAR(20) NOT NULL
+);
+
+
+CREATE TABLE Rentals (
+    rental_id SERIAL PRIMARY KEY,
+    start_date DATE NOT NULL,
+    end_date DATE NOT NULL,
+    car_id INT NOT NULL,
+    customer_id INT NOT NULL,
+    FOREIGN KEY (car_id) REFERENCES Cars(car_id),
+    FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
+);
+
+INSERT INTO Cars (make, model, year, color, plate_number)
+VALUES ('Toyota', 'Camry', 2020, 'White', 'AR20BVD');
+
+INSERT INTO Cars (make, model, year, color, plate_number)
+VALUES ('Dacia', 'Logan', 2017, 'Grey', 'TM19TDV');
+
+INSERT INTO Cars (make, model, year, color, plate_number)
+VALUES ('Opel', 'Corsa', 2007, 'Black', 'TM21DRV');
+
+INSERT INTO Cars (make, model, year, color, plate_number)
+VALUES ('Alfa Romeo', 'Giulia', 2010, 'White', 'CS21NMV');
+
+
+INSERT INTO Customers (name, address, driver_license_number)
+VALUES ('Dorinel Munteanu', 'Circumvalatiunii 28', '0741896520');
+
+INSERT INTO Customers (name, address, driver_license_number)
+VALUES ('Bibart Vivian', 'Aleea Brasov', '1234567890');
+
+INSERT INTO Customers (name, address, driver_license_number)
+VALUES ('Pop Maria', 'Calea Dumbravitei', '4927539817');
+
+INSERT INTO Rentals (start_date, end_date, car_id, customer_id)
+VALUES ('2023-01-01', '2023-02-07', 1, 1);
+
+INSERT INTO Rentals (start_date, end_date, car_id, customer_id)
+VALUES ('2022-12-11', '2023-02-03', 3, 3);
+
+INSERT INTO Rentals (start_date, end_date, car_id, customer_id)
+VALUES ('2022-10-11', '2023-02-01', 4, 4);
+
+UPDATE Cars
+SET color = 'Red'
+WHERE car_id = 1;
+
+DELETE FROM Cars
+WHERE car_id = 2;
+
+
