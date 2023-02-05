@@ -10,6 +10,9 @@
   
   https://drive.google.com/file/d/1AjSU_9ObvvgiQg5-X2BNl26bZPE9YfIx/view?usp=share_link
   
+  ![Diagrama_car_rental](https://user-images.githubusercontent.com/118603219/216809614-8a040dca-81af-4c6a-a61a-26de1e27290e.png)
+
+  
   Steps:
 
 git clone (descarcare repository)
