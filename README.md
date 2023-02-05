@@ -8,7 +8,8 @@
   - Customers:  customer_id ; name ; address ; driver_license_number
   - Rentals: rental_id ; start_date ; end_date ; car_id ; customer_id
   
-  https://drive.google.com/file/d/1AjSU_9ObvvgiQg5-X2BNl26bZPE9YfIx/view?usp=share_link
+  ![Diagrama_abstracta_Car rental](https://user-images.githubusercontent.com/118603219/216809866-87a2fea1-84a3-45c0-ae6b-c05459b339eb.JPG)
+
   
   ![Diagrama_car_rental](https://user-images.githubusercontent.com/118603219/216809614-8a040dca-81af-4c6a-a61a-26de1e27290e.png)
 
